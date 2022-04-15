@@ -1,0 +1,2 @@
+This repository contains the Extra-Vehicular Activity dataset, available at https://catalog.data.gov/dataset/extra-vehicular-activity-eva-us-and-russia
+The dataset's here so I can easily download into my AWS instance. It also contains a python script that converts the data from CSV to JSON for easy use within MongoDB, running it will generate more data to use.
