@@ -16,7 +16,7 @@ def eva_format(line):
     if line[4] != "":
         tmp = line[4].split("/")
         dt_tmp = [tmp[2], tmp[0], tmp[1]]
-        stamp += '"Date": ISODate("' + "-".join(dt_tmp) + '"), '
+        stamp += '"Date": {"$date": "' + "-".join(dt_tmp) + 'T00:00:00.00Z" },'
     # Duration, convert to seconds
     if line[5] != "":
         tmp = line[5].split(":")
@@ -103,7 +103,7 @@ for i in range(generate_no):
     more_json.write(eva_format(eva_generate(id_counter, countries, crews, vehicles, purposes)) + "\n")
     id_counter += 1
     
-# Generate a lot more data if necessary
+# Generate a lot lot more data if necessary
 generate_no = 10000
 crews = list(crews)
 vehicles = list(vehicles)
@@ -112,7 +112,7 @@ for i in range(generate_no):
     evenmore_json.write(eva_format(eva_generate(id_counter, countries, crews, vehicles, purposes)) + "\n")
     id_counter += 1
 
-# Close the document
+# Close the documents
 eva_csv.close()
 eva_json.close()
 extra_json.close()
