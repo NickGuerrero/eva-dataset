@@ -16,7 +16,7 @@ def eva_format(line):
     if line[4] != "":
         tmp = line[4].split("/")
         dt_tmp = [tmp[2], tmp[0], tmp[1]]
-        stamp += '"Date": {"$date": "' + "-".join(dt_tmp) + 'T00:00:00.00Z" },'
+        stamp += '"Date": {"$date": "' + "-".join(dt_tmp) + 'T00:00:00Z" },'
     # Duration, convert to seconds
     if line[5] != "":
         tmp = line[5].split(":")
