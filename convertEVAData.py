@@ -35,7 +35,7 @@ def eva_format(line):
 # Grab field names => EVA #,Country,    Crew,Vehicle,Date,Duration,Purpose 
 def eva_generate(id_no, countries, crews, vehicles, purposes):
     # Generate a date
-    da_num = [random.randint(1, 12), random.randint(1, 30), str(random.randint(1970, 2020))]
+    da_num = [random.randint(1, 12), random.randint(1, 28), str(random.randint(1970, 2020))]
     date = str(da_num[0]) + "/" if da_num[0] > 9 else "0" + str(da_num[0]) + "/"
     date += str(da_num[1]) if da_num[1] > 9 else "0" + str(da_num[1])
     date += "/" + str(da_num[2])
